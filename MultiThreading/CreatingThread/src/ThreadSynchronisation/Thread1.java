@@ -1,0 +1,19 @@
+package ThreadSynchronisation;
+
+public class Thread1 extends Thread {
+	
+	MathUtils mu;
+	public Thread1(MathUtils mu) {
+		this.mu = mu;
+	}
+	public void run() {
+		try {
+			mu.getMultiples(2);
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("exception raised: "+ e);
+		}
+	}
+
+}
